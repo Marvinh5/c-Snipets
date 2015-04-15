@@ -2,10 +2,10 @@
       {
 
           var txt = (TextBox)sender;
-          txt.Text = CheckRegex(txt.Text, @"[\w+\d+]");
+          txt.Text = CheckRegex(txt.Text, @"[\w\d]");
           txt.CaretIndex = txt.Text.Length;
       }
-
+      //cleans the input from anything but text that matches the parameter
       private static String CheckRegex(string text, string regex)
       {
           var regexResult = Regex.Matches(text, regex);
